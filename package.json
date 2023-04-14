@@ -2,7 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/FatykovKirill/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/FatykovKirill/frontend-project-44/actions)",
-  "main": "index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +17,6 @@
   "bugs": {
     "url": "https://github.com/FatykovKirill/frontend-project-44/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/FatykovKirill/frontend-project-44#readme"
 }
