@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import salute from '../src/cli.js';
 // Settings
 const easy = 3;
 const normal = 6;
@@ -8,9 +9,7 @@ const levels = ['easy', 'normal', 'hard'];
 const minNumber = 1;
 const maxNumber = 100;
 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}`);
+const userName = salute();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const levelGame = readlineSync.keyInSelect(levels, 'Which level?');
 
@@ -29,7 +28,7 @@ const brainEven = (level) => {
   let maxQuestion;
   if (level === 'easy') {
     maxQuestion = easy;
-  } else if (level === 'noraml') {
+  } else if (level === 'normal') {
     maxQuestion = normal;
   } else {
     maxQuestion = hard;
@@ -46,7 +45,7 @@ const brainEven = (level) => {
       console.log('Correct!');
     } else {
       console.log(`'${answerYesOrNo}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName} Your score: ${i}`);
+      console.log(`Let's try again, ${userName}. Your score: ${i}`);
       break;
     }
   }
