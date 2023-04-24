@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// import { question } from 'readline-sync';
 import brainGame from '../src/index.js';
 import brainEven from '../src/games/game-even.js';
 
