@@ -12,8 +12,8 @@ const brainGame = (rules, game, easy = 3, normal = 6, hard = 10) => {
   const levels = ['easy', 'normal', 'hard'];
 
   const userName = salute();
-  console.log(rules);
   const levelGame = readlineSync.keyInSelect(levels, 'Which level?');
+  console.log(rules);
 
   let maxQuestion;
   if (levels[levelGame] === 'easy') {
