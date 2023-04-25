@@ -4,29 +4,20 @@ const min = 1;
 const max = 100;
 
 // Game
-const getGreatestCommonDiviosor = (num1, num2) => {
-  if (num1 === num2) {
-    return num1;
+const getGreatestCommonDiviosor = (a, b) => {
+  let num1 = a;
+  let num2 = b;
+  if (num1 === 0) {
+    return num2;
   }
-  if (num1 === 1 || num2 === 1) {
-    return 1;
+  while (num2 !== 0) {
+    if (num1 > num2) {
+      num1 -= num2;
+    } else {
+      num2 -= num1;
+    }
   }
-  if (num1 % 2 === 0 && num2 % 2 === 0) {
-    return 2 * getGreatestCommonDiviosor(num1 / 2, num2 / 2);
-  }
-  if (num1 % 2 === 0 && num2 % 2 !== 0) {
-    return getGreatestCommonDiviosor(num1 / 2, num2);
-  }
-  if (num1 % 2 !== 0 && num2 % 2 === 0) {
-    return getGreatestCommonDiviosor(num1, num2 / 2);
-  }
-  if (num1 % 2 !== 0 && num2 % 2 !== 0 && num1 < num2) {
-    return getGreatestCommonDiviosor(num1, (num2 - num1) / 2);
-  }
-  if (num1 % 2 !== 0 && num2 % 2 !== 0 && num1 > num2) {
-    return getGreatestCommonDiviosor((num1 - num2) / 2, num2);
-  }
-  return console.log('Expected other sign');
+  return num1;
 };
 
 const brainGcd = () => {

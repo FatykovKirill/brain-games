@@ -14,8 +14,7 @@ const brainGame = (rules, game) => {
     const answerUser = readlineSync.question('Your answer: ');
     const correctAnswer = String(result);
     if (correctAnswer === answerUser && i === 2) {
-      console.log('Correct!');
-      console.log(`Congratulations, ${userName}!`);
+      console.log(`Correct!\nCongratulations, ${userName}!`);
     } else if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
