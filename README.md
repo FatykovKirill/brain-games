@@ -48,6 +48,6 @@ __brain-progression__
 
 __brain-prime__
 
-Простое ли число?. Показывается случайное число. Нужно ответить <code>yes</code>, если число простое, или <code>no</code> — если нет:
+Простое ли число? Показывается случайное число. Нужно ответить <code>yes</code>, если число простое, или <code>no</code> — если нет:
 
 <a href='https://asciinema.org/a/Xgital9LDwwTu5PK0CHqLRMd2'><img src='https://asciinema.org/a/Xgital9LDwwTu5PK0CHqLRMd2.png'></a>
