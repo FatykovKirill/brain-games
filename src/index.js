@@ -25,7 +25,7 @@ const brainGame = (rules, game, easy = 3, normal = 6, hard = 10) => {
   } else {
     console.log('cancel');
   }
-  for (let i = 0; i < maxQuestion; i++) {
+  for (let i = 0; i < maxQuestion; i += 1) {
     const [question, result] = game();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
@@ -36,7 +36,7 @@ const brainGame = (rules, game, easy = 3, normal = 6, hard = 10) => {
     } else if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName} Your score: ${i}`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}! Your score: ${i}`);
       break;
     }
   }

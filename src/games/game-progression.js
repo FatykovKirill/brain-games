@@ -6,7 +6,7 @@ const brainProgression = () => {
 
   const array = [];
   let sum = firstNumber;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i += 1) {
     array.push(sum);
     sum += progressionNumber;
   }
@@ -19,7 +19,7 @@ const brainProgression = () => {
     return newArr;
   };
 
-  return [changeOneItemArray(array), array[randomIndex]];
+  return [changeOneItemArray(array).join(' '), array[randomIndex]];
 };
 
 export default brainProgression;
