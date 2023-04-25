@@ -20,8 +20,10 @@ const brainGame = (rules, game, easy = 3, normal = 6, hard = 10) => {
     maxQuestion = easyLevel;
   } else if (levels[levelGame] === 'normal') {
     maxQuestion = normalLevel;
-  } else {
+  } else if (levels[levelGame] === 'hard') {
     maxQuestion = hardLevel;
+  } else {
+    console.log('cancel');
   }
   for (let i = 0; i < maxQuestion; i++) {
     const [question, result] = game();
