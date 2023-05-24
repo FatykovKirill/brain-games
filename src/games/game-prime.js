@@ -1,5 +1,5 @@
 import brainGame from '../index.js';
-import getRandomNumber, { convertBooleanInAnswer } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const min = 1;
 const max = 100;
@@ -19,8 +19,7 @@ const isPrime = (num) => {
 
 const brainPrime = () => {
   const randomNumber = getRandomNumber(min, max);
-  const result = isPrime(randomNumber);
-  const answer = convertBooleanInAnswer(result);
+  const answer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
 };
 
