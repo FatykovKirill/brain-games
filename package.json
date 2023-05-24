@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.6.0",
-  "description": "[![Actions Status](https://github.com/FatykovKirill/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/FatykovKirill/frontend-project-44/actions)",
+  "description": "The first Hexlet frontend progect: Brain Games",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

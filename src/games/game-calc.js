@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../index.js';
+import brainGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const min = 1;
 const max = 10;
@@ -9,16 +10,16 @@ const getRandomItemArray = (arr) => (
 );
 
 const makeItUpSignsAndCalc = (num1, num2, sign) => {
-  if (sign === '+') {
-    return num1 + num2;
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      throw new Error(`Expected other sign: '${sign}'!`);
   }
-  if (sign === '-') {
-    return num1 - num2;
-  }
-  if (sign === '*') {
-    return num1 * num2;
-  }
-  return console.log('Expected other sign');
 };
 const brainCalc = () => {
   const randomSing = getRandomItemArray(signs);
@@ -27,4 +28,8 @@ const brainCalc = () => {
   return [`${randomNumber1} ${randomSing} ${randomNumber2}`, makeItUpSignsAndCalc(randomNumber1, randomNumber2, randomSing)];
 };
 
-export default brainCalc;
+const rules = 'What is the result of the expression?';
+
+export default () => {
+  brainGame(rules, brainCalc);
+};

@@ -20,7 +20,33 @@ make install
 <a href='https://asciinema.org/a/UzS9MYthPcTOumqmtaSzGty2W'><img src='https://asciinema.org/a/UzS9MYthPcTOumqmtaSzGty2W.png'></a>
 
 # Игры
+## Команды для запуска игр
 Игры вызываются следующими командами:
+- Приветсвие 
+```
+brain-games
+```
+- Проверка на четность
+```
+brain-even
+```
+- Калькулятор
+```
+brain-calc
+```
+- Наибольший общий делитель
+```
+brain-gcd
+```
+- Арифметическая прогрессия
+```
+brain-progression
+```
+- Определение простого числа
+```
+brain-prime
+```
+## Описание и демонстрация игр
 
 __brain-even__
 

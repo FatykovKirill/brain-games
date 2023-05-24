@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../index.js';
+import brainGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const brainProgression = () => {
   const firstNumber = getRandomNumber(1, 100);
@@ -22,4 +23,9 @@ const brainProgression = () => {
   return [changeOneItemArray(array).join(' '), array[randomIndex]];
 };
 
-export default brainProgression;
+// Settings
+const rules = 'What number is missing in the progression?';
+
+export default () => {
+  brainGame(rules, brainProgression);
+};

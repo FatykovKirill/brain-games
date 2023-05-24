@@ -1,12 +1,14 @@
 import readlineSync from 'readline-sync';
-import salute from './cli.js';
 
-export const getRandomNumber = (min, max) => (
-  Math.floor(Math.random() * (max - min + 1)) + min
-);
+const runWelcome = () => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}`);
+  return userName;
+};
 
 const brainGame = (rules, game) => {
-  const userName = salute();
+  const userName = runWelcome();
   console.log(rules);
   for (let i = 0; i < 3; i += 1) {
     const [question, result] = game();

@@ -1,4 +1,5 @@
-import { getRandomNumber } from '../index.js';
+import brainGame from '../index.js';
+import getRandomNumber, { convertBooleanInAnswer } from '../utils.js';
 
 const min = 1;
 const max = 100;
@@ -6,14 +7,21 @@ const max = 100;
 // Game
 const isEven = (num) => {
   if (num % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
 const brainEven = () => {
   const randomNumber = getRandomNumber(min, max);
-  return [randomNumber, isEven(randomNumber)];
+  const result = isEven(randomNumber);
+  const answer = convertBooleanInAnswer(result);
+  return [randomNumber, answer];
 };
 
-export default brainEven;
+// Settings
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+export default () => {
+  brainGame(rules, brainEven);
+};
