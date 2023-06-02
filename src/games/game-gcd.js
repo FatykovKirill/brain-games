@@ -1,8 +1,8 @@
 import brainGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const min = 1;
-const max = 100;
+// Settings
+const rules = 'Find the greatest common divisor of given numbers.';
 
 // Game
 const getGreatestCommonDiviosor = (a, b) => {
@@ -22,13 +22,13 @@ const getGreatestCommonDiviosor = (a, b) => {
 };
 
 const brainGcd = () => {
-  const randomNumber1 = getRandomNumber(min, max);
-  const randomNumber2 = getRandomNumber(min, max);
-  return [`${randomNumber1} ${randomNumber2}`, getGreatestCommonDiviosor(randomNumber1, randomNumber2)];
-};
+  const minNumber = 1;
+  const maxNumber = 100;
 
-// Settings
-const rules = 'Find the greatest common divisor of given numbers.';
+  const randomNumber1 = getRandomNumber(minNumber, maxNumber);
+  const randomNumber2 = getRandomNumber(minNumber, maxNumber);
+  return [`${randomNumber1} ${randomNumber2}`, String(getGreatestCommonDiviosor(randomNumber1, randomNumber2))];
+};
 
 export default () => {
   brainGame(rules, brainGcd);

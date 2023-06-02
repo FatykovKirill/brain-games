@@ -1,8 +1,8 @@
 import brainGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const min = 1;
-const max = 100;
+// Settings
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -18,13 +18,13 @@ const isPrime = (num) => {
 };
 
 const brainPrime = () => {
-  const randomNumber = getRandomNumber(min, max);
+  const minNumber = 1;
+  const maxNumber = 100;
+
+  const randomNumber = getRandomNumber(minNumber, maxNumber);
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
 };
-
-// Settings
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default () => {
   brainGame(rules, brainPrime);

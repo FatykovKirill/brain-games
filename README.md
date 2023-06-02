@@ -1,13 +1,14 @@
-# Тесты
+# Игры разума
+## Тесты
 
 [![Actions Status](https://github.com/FatykovKirill/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/FatykovKirill/frontend-project-44/actions) - Hexlet tests and linter status
 <br><br>
 [![Maintainability](https://api.codeclimate.com/v1/badges/0302bf0df204775a53e4/maintainability)](https://codeclimate.com/github/FatykovKirill/frontend-project-44/maintainability) - Оценка Maintainability от Codeclimate.
 
-# Описание
+## Описание
 Учебный проект "Игры разума". Пять консольных игр с выбором уровня сложности. Игра заверешается в случае успешного прохождения всех раундов или допущения ошибки. От выбора сложности зависит количества раундов. 
 
-# Установка
+## Установка
 1. Склонировать репозиторий
 ```
 git clone https://github.com/FatykovKirill/frontend-project-44.git
@@ -19,8 +20,8 @@ make install
 ```
 <a href='https://asciinema.org/a/UzS9MYthPcTOumqmtaSzGty2W'><img src='https://asciinema.org/a/UzS9MYthPcTOumqmtaSzGty2W.png'></a>
 
-# Игры
-## Команды для запуска игр
+## Игры
+### Команды для запуска игр
 Игры вызываются следующими командами:
 - Приветсвие 
 ```
@@ -46,7 +47,7 @@ brain-progression
 ```
 brain-prime
 ```
-## Описание и демонстрация игр
+### Описание и демонстрация игр
 
 __brain-even__
 

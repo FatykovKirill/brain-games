@@ -1,5 +1,7 @@
 import brainGame from '../index.js';
 import getRandomNumber from '../utils.js';
+// Settings
+const rules = 'What number is missing in the progression?';
 
 const brainProgression = () => {
   const firstNumber = getRandomNumber(1, 100);
@@ -7,7 +9,8 @@ const brainProgression = () => {
 
   const array = [];
   let sum = firstNumber;
-  for (let i = 0; i < 10; i += 1) {
+  const arrayLength = 10;
+  for (let i = 0; i < arrayLength; i += 1) {
     array.push(sum);
     sum += progressionNumber;
   }
@@ -20,11 +23,8 @@ const brainProgression = () => {
     return newArr;
   };
 
-  return [changeOneItemArray(array).join(' '), array[randomIndex]];
+  return [changeOneItemArray(array).join(' '), String(array[randomIndex])];
 };
-
-// Settings
-const rules = 'What number is missing in the progression?';
 
 export default () => {
   brainGame(rules, brainProgression);

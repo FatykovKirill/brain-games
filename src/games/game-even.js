@@ -1,8 +1,8 @@
 import brainGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const min = 1;
-const max = 100;
+// Settings
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Game
 const isEven = (num) => {
@@ -13,13 +13,13 @@ const isEven = (num) => {
 };
 
 const brainEven = () => {
-  const randomNumber = getRandomNumber(min, max);
+  const minNumber = 1;
+  const maxNumber = 100;
+
+  const randomNumber = getRandomNumber(minNumber, maxNumber);
   const answer = isEven(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
 };
-
-// Settings
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export default () => {
   brainGame(rules, brainEven);
