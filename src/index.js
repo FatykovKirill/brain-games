@@ -11,15 +11,14 @@ const brainGame = (rules, game) => {
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
     const correctAnswer = result;
-    if (correctAnswer === answerUser && i === 2) {
-      console.log(`Correct!\nCongratulations, ${userName}!`);
-    } else if (correctAnswer === answerUser) {
+    if (correctAnswer === answerUser) {
       console.log('Correct!');
     } else {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-      break;
+      return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default brainGame;
